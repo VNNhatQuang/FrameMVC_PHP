@@ -10,8 +10,10 @@
 <body>
     <?= "Hello World" ?>
 
+    <br>
+
     <?php
-        dd($users);
+        print_r($users);
     ?>
 </body>
 
