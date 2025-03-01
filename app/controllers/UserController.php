@@ -1,9 +1,8 @@
 <?php
+require_once 'app/requests/StoreUserRequest.php';
+require_once 'app/requests/UpdateUserRequest.php';
+require_once 'app/models/User.php';
 
-include_once "Core/renderView.php";
-include_once "Core/functions.php";
-include_once "app/requests/StoreUserRequest.php";
-include_once "app/requests/UpdateUserRequest.php";
 
 class UserController
 {
@@ -15,7 +14,11 @@ class UserController
      */
     public function index()
     {
-        renderView('index');
+        $user = User::all();
+
+        return view('index', [
+            'users' => $user
+        ]);
     }
 
 
@@ -26,6 +29,7 @@ class UserController
      */
     public function showCreateForm()
     {
+        echo "showCreateFrom";
     }
 
 
