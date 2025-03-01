@@ -1,5 +1,8 @@
 <?php
 
+use App\Controllers\UserController;
+use App\Middlewares\Authenticate;
+
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 

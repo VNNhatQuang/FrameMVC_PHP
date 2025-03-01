@@ -1,7 +1,7 @@
 <?php
-require_once 'app/requests/StoreUserRequest.php';
-require_once 'app/requests/UpdateUserRequest.php';
-require_once 'app/models/User.php';
+namespace App\Controllers;
+
+use App\Models\User;
 
 
 class UserController
@@ -40,6 +40,7 @@ class UserController
      */
     public function store()
     {
+        echo "store";
     }
 
 

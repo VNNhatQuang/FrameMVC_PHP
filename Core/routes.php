@@ -18,7 +18,6 @@ function handleRoute($uri, $routes = [])
         // Handle middlewares
         if (is_array($middlewares)) {
             foreach ($middlewares as $middlewareName) {
-                require "app/middlewares/$middlewareName.php";
                 if (class_exists($middlewareName)) {
                     $middleware = new $middlewareName();
                     if (method_exists($middleware, 'handle')) {
@@ -33,7 +32,6 @@ function handleRoute($uri, $routes = [])
         }
 
         // Handle method in controller
-        require "app/controllers/$controllerName.php";
         if (class_exists($controllerName)) {
             $controller = new $controllerName();
             if (method_exists($controller, $method)) {
@@ -44,6 +42,6 @@ function handleRoute($uri, $routes = [])
             throw new Exception("Controller $controllerName not found");
         }
     } else {
-        return view('not-found-404');
+        return view('404');
     }
 }
