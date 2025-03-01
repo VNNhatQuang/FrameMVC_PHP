@@ -9,7 +9,7 @@
  */
 function view($viewName, $data = [])
 {
-    $viewPath = "app/views/$viewName.view.php";
+    $viewPath = "resources/views/$viewName.view.php";
     if (!file_exists($viewPath)) {
         die("View '{$viewName}' not found!");
     }
