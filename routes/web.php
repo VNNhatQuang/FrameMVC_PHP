@@ -1,18 +1,32 @@
 <?php
 
+use App\Controllers\AuthController;
+use App\Controllers\HomePageController;
 use App\Controllers\UserController;
 use App\Middlewares\Authenticate;
 
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
+
 $routes = [
-    '/' => [UserController::class, 'index'],
-    '/create' => [UserController::class, [Authenticate::class], 'showCreateForm'],
-    '/store' => [UserController::class, 'store'],
-    '/edit' => [UserController::class, 'showEditForm'],
-    '/update' => [UserController::class, 'update'],
-    '/destroy' => [UserController::class, 'destroy'],
+    '/' => [AuthController::class, 'showLoginForm'],
+
+    // auth
+    '/auth/login' => [AuthController::class, 'login'],
+
+    // home
+    '/home' => [HomePageController::class, 'showHomePage'],
+
+    // user
+    '/user' => [UserController::class, 'index'],
+    '/user/create' => [UserController::class, [Authenticate::class], 'showCreateForm'],
+    '/user/store' => [UserController::class, 'store'],
+    '/user/edit' => [UserController::class, 'showEditForm'],
+    '/user/update' => [UserController::class, 'update'],
+    '/user/destroy' => [UserController::class, 'destroy'],
 ];
+
+
 
 handleRoute($uri, $routes);
