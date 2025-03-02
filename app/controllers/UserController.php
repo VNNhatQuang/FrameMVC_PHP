@@ -9,7 +9,6 @@ class UserController
 
     /**
      * Show list of Users
-     *
      * @return void
      */
     public function index()
@@ -24,7 +23,6 @@ class UserController
 
     /**
      * Show form create User
-     *
      * @return void
      */
     public function showCreateForm()
@@ -35,7 +33,6 @@ class UserController
 
     /**
      * Store User in database
-     *
      * @return void
      */
     public function store()
@@ -46,7 +43,6 @@ class UserController
 
     /**
      * Show form edit User
-     *
      * @return void
      */
     public function showEditForm()
@@ -56,7 +52,6 @@ class UserController
 
     /**
      * Update User in database
-     *
      * @return void
      */
     public function update()
@@ -66,10 +61,11 @@ class UserController
 
     /**
      * Delete User in database
-     *
      * @return void
      */
     public function destroy()
     {
     }
+
+
 }

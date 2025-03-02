@@ -14,17 +14,18 @@ $routes = [
 
     // auth
     '/auth/login' => [AuthController::class, 'login'],
+    '/auth/logout' => [AuthController::class, [Authenticate::class], 'logout'],
 
     // home
-    '/home' => [HomePageController::class, 'showHomePage'],
+    '/home' => [HomePageController::class, [Authenticate::class], 'showHomePage'],
 
     // user
-    '/user' => [UserController::class, 'index'],
+    '/user' => [UserController::class, [Authenticate::class], 'index'],
     '/user/create' => [UserController::class, [Authenticate::class], 'showCreateForm'],
-    '/user/store' => [UserController::class, 'store'],
-    '/user/edit' => [UserController::class, 'showEditForm'],
-    '/user/update' => [UserController::class, 'update'],
-    '/user/destroy' => [UserController::class, 'destroy'],
+    '/user/store' => [UserController::class, [Authenticate::class], 'store'],
+    '/user/edit' => [UserController::class, [Authenticate::class], 'showEditForm'],
+    '/user/update' => [UserController::class, [Authenticate::class], 'update'],
+    '/user/destroy' => [UserController::class, [Authenticate::class], 'destroy'],
 ];
 
 

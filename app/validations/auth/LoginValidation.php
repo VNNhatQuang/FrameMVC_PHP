@@ -22,8 +22,8 @@ class LoginValidation
         }
 
         // Kiểm tra mật khẩu:
-        if (!v::notEmpty()->stringType()->length(8, 20)->regex('/[A-Z]/')->regex('/[a-z]/')->regex('/[0-9]/')->regex('/[\W]/')->validate($this->data['password'] ?? '')) {
-            $this->errors['password'] = 'Mật khẩu phải không được để trống, phải chứa ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt';
+        if (!v::notEmpty()->stringType()->validate($this->data['password'] ?? '')) {
+            $this->errors['password'] = 'Mật khẩu phải không được để trống';
         }
 
         return empty($this->errors);
