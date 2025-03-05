@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- All Libraries -->
+    <?php require_once('resources\layouts\libraries.php'); ?>
 </head>
 
 <body>
@@ -35,6 +37,9 @@
             <span style="color: red;"><?= $errorMessage['password'] ?? "" ?></span>
         </form>
     </div>
+
+    <!-- All scripts -->
+    <?php require_once('resources\layouts\scripts.php'); ?>
 </body>
 
 </html>
