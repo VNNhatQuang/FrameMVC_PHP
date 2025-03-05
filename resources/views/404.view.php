@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
     <!-- All Libraries -->
-    <?php require_once('resources\layouts\libraries.php'); ?>
+    <?php include_once('resources\layouts\libraries.php'); ?>
 </head>
 
 <body class="flex items-center justify-center h-screen bg-gray-100">
@@ -20,7 +20,7 @@
     </div>
 
     <!-- All scripts -->
-    <?php require_once('resources\layouts\scripts.php'); ?>
+    <?php include_once('resources\layouts\scripts.php'); ?>
 </body>
 
 </html>

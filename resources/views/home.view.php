@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!-- All Libraries -->
-    <?php require_once('resources\layouts\libraries.php'); ?>
+    <?php include_once('resources\layouts\libraries.php'); ?>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <h1>Home Page</h1>
 
     <!-- All scripts -->
-    <?php require_once('resources\layouts\scripts.php'); ?>
+    <?php include_once('resources\layouts\scripts.php'); ?>
 </body>
 
 </html>
