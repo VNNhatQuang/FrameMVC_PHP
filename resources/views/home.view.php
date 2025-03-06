@@ -13,7 +13,7 @@
     <!-- Header -->
     <?php require_once('resources\layouts\header.view.php'); ?>
 
-    <h1>Home Page</h1>
+    <h1 class="text-5xl">Home Page</h1>
 
     <!-- All scripts -->
     <?php include_once('resources\layouts\scripts.php'); ?>
