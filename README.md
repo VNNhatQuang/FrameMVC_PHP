@@ -93,7 +93,8 @@ The project follows this structure:
     ├── ddl                     # Chứa file tạo database
     ├── resources               # Chứa các file giao diện (php, html), css, js
     ├── routes
-    │   ├── web.php             # Chứa các khai báo đường dẫn routing
+    │   ├── web.php             # Nơi khai báo các đường dẫn routing
+    ├── storage                 # Chứa những file cần lưu trữ
     ├── .env.example            # Mẫu file cấu hình môi trường
     ├── .gitignore              # Các file, thư mục không muốn đưa lên git
     ├── composer.json           # Cấu hình Composer
