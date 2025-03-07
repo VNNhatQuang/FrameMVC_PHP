@@ -1,59 +1,59 @@
 # 🛠 PHP MVC Framework
 
-Một dự án khung PHP MVC đơn giản được xây dựng từ đầu với các tính năng cơ bản như routing, controller, view, và model.
+A simple PHP MVC frame project is built from the beginning with basic features such as Routing, Controller, View, and Model.
 
 ---
 
 
 
-## 🚀 Mục lục
-- [Giới thiệu](#giới-thiệu)
-- [Yêu cầu hệ thống](#yêu-cầu-hệ-thống)
-- [Cài đặt](#cài-đặt)
-- [Cấu trúc thư mục](#cấu-trúc-thư-mục)
+## 🚀 TABLE OF CONTENTS
+- 📌[Introduction](#introduction)
+- 🖥 [Requirements](#requirements)
+- ⚙️ [Get started](#get_started)
+- 📁 [Folder structure](#folder_structure)
 
 ---
 
 
 
-## 📌 Giới thiệu
-Dự án này được phát triển nhằm mục đích học tập và thực hành với mô hình MVC (Model-View-Controller) thuần PHP. Bao gồm các tính năng như:
-- Routing đơn giản.
-- Xử lý request và response.
-- Mô hình MVC rõ ràng với các thư mục riêng cho Controller, Model và View.
-- Tích hợp JWT để xác thực người dùng.
-- Hỗ trợ quản lý session và cookie.
+## 📌 Introduction
+This project is developed for the purpose of learning and practicing with the MVC model (Model-view-Controller) PHP. Includes features such as:
+- Simple routing.
+- Processing Request and Response.
+- MVC model clearly with separate folders for Controller, Model and View.
+- Integrated JWT to authenticate users.
+- Support Session and Cookie management.
 
 ---
 
 
 
-## 🖥 Yêu cầu hệ thống
-- **PHP:** >= 7.4
-- **Composer:** >= 2.x (nếu có dùng thư viện ngoài)
-- **MySQL:** >= 5.7
+## 🖥 Requirements
+- ** PHP: **> = 7.4
+- ** Composer: **> = 2.x (if there is an external library)
+- ** MySQL: **> = 5.7
 
 ---
 
 
 
-## ⚙️ Cài đặt
-1. **Clone dự án:**
+## ⚙️ Get started
+1. **Clone project:**
     ```bash
     git clone https://github.com/VNNhatQuang/FrameMVC_PHP.git
     cd FrameMVC_PHP
     ```
 
-2. **Cài đặt thư viện:**
+2. **Install dependencies:**
     ```bash
     composer install
     ```
 
-3. **Tạo file `.env` dựa trên `.env.example`:**
+3. **Create `.env` file based on `.env.example`:**
     ```bash
     cp .env.example .env
     ```
-    Cập nhật thông tin trong file .env:
+    Update variables in `.env` file:
 
         SECRET_KEY = QuangVNN
         DB_HOST = localhost
@@ -63,42 +63,42 @@ Dự án này được phát triển nhằm mục đích học tập và thực 
         DB_NAME = api_template_db
 
 4. **Import database:**
-    - Import file `database.sql` từ thư mục `ddl` vào MySQL
+    - Import `database.sql` file from `ddl` folder into MySQL
 
-5. **Chạy dự án:**
+5. **Run project:**
     ```bash
     php -S localhost:8000
     ```
 
 
 
-## 📁 Cấu trúc thư mục
+## 📁 Folder structure
 The project follows this structure:
 
     .
     ├── app
-    │   ├── controllers         # Xử lý yêu cầu và trả về response
-    │   ├── middleware          # Xử lý kiểm tra yêu cầu trước khi tới controller
-    │   ├── models              # Xử lý database với từng model
-    │   ├── services            # Xử lý business logic
-    │   ├── validations         # Xử lý validate dữ liệu
+    │   ├── controllers         # Controllers
+    │   ├── middleware          # Middlewares
+    │   ├── models              # Handle database with each model
+    │   ├── services            # Handle business logic
+    │   ├── validations         # Handle validate data request
     ├── config
-    │   ├── database.php        # Xử lý kết nối đến database
-    │   ├── dotenv.php          # Xử lý đọc các biến config từ file .env
+    │   ├── database.php        # Handle connect to database
+    │   ├── dotenv.php          # Handle read variables config from .env file
     ├── Core
-    │   ├── functions.php       # Các hàm hỗ trợ khác
-    │   ├── index.php           # Toàn bộ chức năng của core được import ở đây
-    │   ├── routes.php          # Xử lý định tuyến routing
-    │   ├── views.php           # Xử lý việc render và truyền dữ liệu từ controller sang view
-    ├── ddl                     # Chứa file tạo database
-    ├── resources               # Chứa các file giao diện (php, html), css, js
+    │   ├── functions.php       # Other support functions
+    │   ├── index.php           # Where Import all Core Libraries
+    │   ├── routes.php          # Handle routing
+    │   ├── views.php           # Handle render and data transmission from controller to view
+    ├── ddl                     # Contain create database file
+    ├── resources               # Contain view files (php, html), css, js
     ├── routes
-    │   ├── web.php             # Nơi khai báo các đường dẫn routing
-    ├── storage                 # Chứa những file cần lưu trữ
-    ├── .env.example            # Mẫu file cấu hình môi trường
-    ├── .gitignore              # Các file, thư mục không muốn đưa lên git
-    ├── composer.json           # Cấu hình Composer
-    ├── index.php               # Entry point của ứng dụng
-    ├── README.md               # Tài liệu này
+    │   ├── web.php             # Where define route path
+    ├── storage                 # Contain files need to storage
+    ├── .env.example            # Sample .env file
+    ├── .gitignore              # Where define files, folders Do not want to put on git
+    ├── composer.json           # Composer dependencies
+    ├── index.php               # Entry point of project
+    ├── README.md               # This documentation
 
 ---
