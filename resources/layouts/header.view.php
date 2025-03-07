@@ -11,7 +11,10 @@
         </nav>
 
         <!-- Logout Button -->
-        <a href="/auth/logout"
-            class="text-sm bg-red-500 hover:bg-red-600 px-4 py-1 rounded-md transition-colors">Logout</a>
+        <form action="/auth/logout" method="post">
+            <input type="hidden" name="_token" value="<?= $_COOKIE['_token'] ?>">
+            <button type="submit"
+                class="text-sm bg-red-500 hover:bg-red-600 px-4 py-1 rounded-md transition-colors">Logout</button>
+        </form>
     </div>
 </header>

@@ -8,7 +8,7 @@ use App\Validations\Auth\LoginValidation;
 class AuthController
 {
 
-    /**
+    /** [GET] /
      * Show login page
      * @return void
      */
@@ -21,7 +21,7 @@ class AuthController
     }
 
 
-    /**
+    /** [POST] /auth/login
      * Receive login request
      * @return void
      */
@@ -56,12 +56,14 @@ class AuthController
         header('Location: /home');
     }
 
-    /**
+    /** [POST] /auth/logout
      * Receive logout request
      * @return void
      */
     public function logout()
     {
+        if ($_POST['_token'] !== $_COOKIE['_token'])
+            return view('403');
         setcookie('_token', '', -1, '/', $_ENV['APP_HOST'], true, true);
         header('Location: /');
     }
