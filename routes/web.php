@@ -23,7 +23,7 @@ $routes = [
     '/user' => [UserController::class, [Authenticate::class], 'index'],
     '/user/create' => [UserController::class, [Authenticate::class], 'showCreateForm'],
     '/user/store' => [UserController::class, [Authenticate::class], 'store'],
-    '/user/edit' => [UserController::class, [Authenticate::class], 'showEditForm'],
+    '/user/edit/:userId' => [UserController::class, [Authenticate::class], 'showEditForm'],
     '/user/update' => [UserController::class, [Authenticate::class], 'update'],
     '/user/destroy' => [UserController::class, [Authenticate::class], 'destroy'],
 ];

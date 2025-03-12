@@ -45,8 +45,9 @@ class UserController
      * Show form edit User
      * @return void
      */
-    public function showEditForm()
+    public function showEditForm($userId)
     {
+        echo $userId;
     }
 
 

@@ -97,6 +97,7 @@ The project follows this structure:
     ├── storage                 # Contain files need to storage
     ├── .env.example            # Sample .env file
     ├── .gitignore              # Where define files, folders Do not want to put on git
+    ├── .htaccess               # Configuration file for Apache (access control, redirects and security settings,...)
     ├── composer.json           # Composer dependencies
     ├── index.php               # Entry point of project
     ├── README.md               # This documentation
