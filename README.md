@@ -101,5 +101,6 @@ The project follows this structure:
     ├── composer.json           # Composer dependencies
     ├── index.php               # Entry point of project
     ├── README.md               # This documentation
+    ├── web.config              # Defines web server and app settings for IIS hosting
 
 ---
